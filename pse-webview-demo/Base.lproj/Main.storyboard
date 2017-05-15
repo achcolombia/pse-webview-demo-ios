@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jvm-1Q-MRT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DfU-pf-66F">
+            <objects>
+                <viewController id="Jvm-1Q-MRT" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8X9-8N-Hwt"/>
+                        <viewControllerLayoutGuide type="bottom" id="vab-bP-BJK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tNB-mo-Taj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioJ-wd-Acq" userLabel="Browser Navigation Container">
+                                <rect key="frame" x="0.0" y="20" width="375" height="46"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I60-Ty-B6s">
+                                        <rect key="frame" x="8" y="8" width="359" height="30"/>
+                                        <color key="backgroundColor" red="0.84064503209999997" green="0.84064503209999997" blue="0.84064503209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Jvm-1Q-MRT" id="Tuv-e4-zW2"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="5LD-KB-JpK"/>
+                                    <constraint firstAttribute="trailing" secondItem="I60-Ty-B6s" secondAttribute="trailing" constant="8" id="8HK-lb-ahw"/>
+                                    <constraint firstItem="I60-Ty-B6s" firstAttribute="leading" secondItem="ioJ-wd-Acq" secondAttribute="leading" constant="8" id="wFh-Yl-cmF"/>
+                                    <constraint firstAttribute="bottom" secondItem="I60-Ty-B6s" secondAttribute="bottom" constant="8" id="yRS-YU-ka3"/>
+                                    <constraint firstItem="I60-Ty-B6s" firstAttribute="top" secondItem="ioJ-wd-Acq" secondAttribute="top" constant="8" id="zb6-ic-1hC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxE-sO-xGm" userLabel="Browser Container">
+                                <rect key="frame" x="0.0" y="66" width="375" height="557"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-AQ-za7">
+                                <rect key="frame" x="0.0" y="66" width="375" height="2"/>
+                            </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lJ-Go-Y3T">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="02u-0n-cNa">
+                                        <connections>
+                                            <action selector="goBack:" destination="Jvm-1Q-MRT" id="koa-in-jgT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="l7Y-v9-4rj"/>
+                                    <barButtonItem systemItem="stop" id="aOx-Kf-jpJ">
+                                        <connections>
+                                            <action selector="stop:" destination="Jvm-1Q-MRT" id="py9-o9-BNg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="ldD-EA-f29"/>
+                                    <barButtonItem systemItem="refresh" id="Edh-lK-8cd">
+                                        <connections>
+                                            <action selector="reload:" destination="Jvm-1Q-MRT" id="m51-KK-QKn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="mng-NI-3yh"/>
+                                    <barButtonItem systemItem="fastForward" id="LLH-G7-FmG">
+                                        <connections>
+                                            <action selector="goForward:" destination="Jvm-1Q-MRT" id="sgM-PJ-JAA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8lJ-Go-Y3T" firstAttribute="leading" secondItem="tNB-mo-Taj" secondAttribute="leading" id="2WM-uD-BcZ"/>
+                            <constraint firstAttribute="trailing" secondItem="8lJ-Go-Y3T" secondAttribute="trailing" id="2lS-jr-NXe"/>
+                            <constraint firstAttribute="trailing" secondItem="ioJ-wd-Acq" secondAttribute="trailing" id="7aG-oY-WHW"/>
+                            <constraint firstAttribute="trailing" secondItem="IxE-sO-xGm" secondAttribute="trailing" id="OOM-jo-sab"/>
+                            <constraint firstAttribute="trailing" secondItem="gAT-AQ-za7" secondAttribute="trailing" id="QhG-ed-zgl"/>
+                            <constraint firstItem="gAT-AQ-za7" firstAttribute="leading" secondItem="tNB-mo-Taj" secondAttribute="leading" id="T7H-uZ-Odf"/>
+                            <constraint firstItem="ioJ-wd-Acq" firstAttribute="leading" secondItem="tNB-mo-Taj" secondAttribute="leading" id="TvW-qr-YFX"/>
+                            <constraint firstItem="IxE-sO-xGm" firstAttribute="leading" secondItem="tNB-mo-Taj" secondAttribute="leading" id="UFK-o6-Doe"/>
+                            <constraint firstItem="vab-bP-BJK" firstAttribute="top" secondItem="8lJ-Go-Y3T" secondAttribute="bottom" id="eQH-98-7oB"/>
+                            <constraint firstItem="8lJ-Go-Y3T" firstAttribute="top" secondItem="IxE-sO-xGm" secondAttribute="bottom" id="hS4-PI-4XI"/>
+                            <constraint firstItem="ioJ-wd-Acq" firstAttribute="top" secondItem="8X9-8N-Hwt" secondAttribute="bottom" id="jHt-1W-WPY"/>
+                            <constraint firstItem="IxE-sO-xGm" firstAttribute="top" secondItem="ioJ-wd-Acq" secondAttribute="bottom" id="o9Q-2r-3LD"/>
+                            <constraint firstItem="gAT-AQ-za7" firstAttribute="top" secondItem="ioJ-wd-Acq" secondAttribute="bottom" id="yH2-xA-u18"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="browserContainer" destination="IxE-sO-xGm" id="70c-Zo-lmY"/>
+                        <outlet property="browserNavigationContainer" destination="ioJ-wd-Acq" id="MSB-IZ-v56"/>
+                        <outlet property="navigationInformationTextField" destination="I60-Ty-B6s" id="UoW-Oh-TAN"/>
+                        <outlet property="webProgress" destination="gAT-AQ-za7" id="f7d-O1-g1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwP-KQ-oE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="171"/>
+        </scene>
+    </scenes>
+</document>
